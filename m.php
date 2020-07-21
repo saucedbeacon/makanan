@@ -19,20 +19,20 @@ echo "\e[96mKLAIM VC FOOD \n";
         echo color("purple","Berapa Nomormu : ");
         // $no = trim(fgets(STDIN));
         $nohp = trim(fgets(STDIN));
-        $nohp = str_replace("62","62",$nohp);
+        $nohp = str_replace("1","1",$nohp);
         $nohp = str_replace("(","",$nohp);
         $nohp = str_replace(")","",$nohp);
         $nohp = str_replace("-","",$nohp);
         $nohp = str_replace(" ","",$nohp);
 
         if (!preg_match('/[^+0-9]/', trim($nohp))) {
-            if (substr(trim($nohp),0,3)=='62') {
+            if (substr(trim($nohp),0,3)=='1') {
                 $hp = trim($nohp);
             }
             else if (substr(trim($nohp),0,1)=='0') {
                 $hp = '62'.substr(trim($nohp),1);
         }
-         elseif(substr(trim($nohp), 0, 2)=='62'){
+         elseif(substr(trim($nohp), 0, 2)=='1'){
             $hp = '6'.substr(trim($nohp), 1);
         }
         else{
